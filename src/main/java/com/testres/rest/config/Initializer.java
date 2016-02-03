@@ -3,6 +3,7 @@ package com.testres.rest.config;
 /**
  * Created by callo_000 on 27.09.2015.
  */
+
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -13,11 +14,10 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 public class Initializer implements WebApplicationInitializer {
+
     private static final String DISPATCHER_SERVLET_NAME = "dispatcher";
 
-
-    public void onStartup(ServletContext servletContext) throws ServletException
-    {
+    public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
         ctx.register(WebAppConfig.class);
         servletContext.addListener(new ContextLoaderListener(ctx));

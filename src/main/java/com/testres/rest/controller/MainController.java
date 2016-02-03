@@ -14,16 +14,18 @@ import javax.ws.rs.core.MediaType;
 
 @Controller
 @RequestMapping(value = "/")
-public class MainController
-{
-    @RequestMapping(value= "/", method = RequestMethod.GET)
+public class MainController {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     @ResponseBody
-    @Produces({ MediaType.APPLICATION_JSON })
-    public String getMyData()
-    {
+    @Produces({MediaType.APPLICATION_JSON})
+    public String getMyData() {
         return "xui";
     }
 
+    @RequestMapping(value = "/page", method = RequestMethod.GET)
+    public String getPage() {
+        return "index";
+    }
 
 
 }

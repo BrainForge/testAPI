@@ -1,8 +1,6 @@
 package com.testres.rest.repository;
 
 import com.testres.rest.entity.TestTable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

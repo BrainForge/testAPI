@@ -41,4 +41,12 @@ public class MainController {
     public List<TestTable> getTestTable() {
         return testTableService.getAll();
     }
+
+    @RequestMapping(value = "/error", method = RequestMethod.GET)
+    @ResponseBody
+    @Produces({MediaType.APPLICATION_JSON})
+    public Object testError() {
+        Object nullObj = null;
+        return nullObj.hashCode();
+    }
 }

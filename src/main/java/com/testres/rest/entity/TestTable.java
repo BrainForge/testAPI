@@ -1,13 +1,14 @@
 package com.testres.rest.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by callo_000 on 04.02.2016.
  */
 @Entity
 @Table(name = "test")
-public class TestTable {
+public class TestTable implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

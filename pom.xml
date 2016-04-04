@@ -7,6 +7,7 @@
     <groupId>TestApi</groupId>
     <artifactId>TestApi</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <build>
         <plugins>
             <plugin>
@@ -43,8 +44,9 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>4.2.0.Final</version>
+            <version>4.2.12.Final</version>
         </dependency>
+
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -57,7 +59,6 @@
             <artifactId>spring-webmvc</artifactId>
             <version>4.2.4.RELEASE</version>
         </dependency>
-
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -75,7 +76,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.37</version>
+            <version>5.1.6</version>
         </dependency>
 
         <dependency>
@@ -159,6 +160,13 @@
             <artifactId>h2</artifactId>
             <version>1.4.191</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>1.8.2.RELEASE</version>
+        </dependency>
+
 
 
     </dependencies>

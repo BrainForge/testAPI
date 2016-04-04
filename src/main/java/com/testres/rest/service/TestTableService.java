@@ -1,9 +1,9 @@
 package com.testres.rest.service;
 
 import com.testres.rest.entity.TestTable;
+import com.testres.rest.entity.testMongo;
+import com.testres.rest.mongoRepository.TestMongoRepository;
 import com.testres.rest.repository.TestRepository;
-import com.testres.rest.response.APIResponse;
-import com.testres.rest.response.APIResponseBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,8 +20,12 @@ import java.util.List;
 @Service
 @Transactional
 public class TestTableService {
+
     @Autowired
     private TestRepository testRepository;
+
+    @Autowired
+    private TestMongoRepository testMongoRepository;
 
     public List<TestTable> getAll() {
         List<TestTable> test = testRepository.findAll();
@@ -43,6 +47,12 @@ public class TestTableService {
         }
 
         return list;
+    }
 
+    public void insetToMongo(){
+        testMongo testMongo = new testMongo();
+        testMongo.setId("124124sdsadf");
+        testMongo.setName("asdf");
+        testMongoRepository.save(testMongo);
     }
 }
